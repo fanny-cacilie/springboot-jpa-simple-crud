@@ -2,11 +2,7 @@ package com.users.sa.models;
 
 import java.io.Serializable;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="TB_USER")
@@ -21,6 +17,10 @@ public class User implements Serializable {
     private String name;
 
     private String telephone;
+
+    //@ManyToOne
+    //@JoinColumn(name="queue_id")
+    //private Queue queue;
 
     public long getId() {
         return id;
@@ -45,4 +45,12 @@ public class User implements Serializable {
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
+
+    //public Queue getQueue() {
+       // return queue;
+    //}
+
+    //public void setQueue(Queue queue) {
+      //  this.queue = queue;
+    //}
 }
